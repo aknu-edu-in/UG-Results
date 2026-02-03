@@ -23,7 +23,8 @@ function showResult() {
         <h2>Student Photo</h2>
         <p><strong>Hall Ticket No:</strong> ${hallticket}</p>
 
-        <img src="student.jpg"
+        <img src="student1.jpg"
              alt="Student Photo"
              style="
                 width:70vw;
+
