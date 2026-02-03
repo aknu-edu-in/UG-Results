@@ -18,12 +18,12 @@ function showResult() {
     // Hide search section
     searchPage.style.display = "none";
 
-    // Show image (same image for any 12-digit number)
+    // Show large image (70% of screen width)
     photoPage.innerHTML = `
         <h2>Student Photo</h2>
         <p><strong>Hall Ticket No:</strong> ${hallticket}</p>
-        <img src="student.jpg" alt="Student Photo" style="width:200px;border:2px solid #000;">
-        <br><br>
-        <button onclick="location.reload()">Search Again</button>
-    `;
-}
+
+        <img src="student.jpg"
+             alt="Student Photo"
+             style="
+                width:70vw;
