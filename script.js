@@ -1,35 +1,29 @@
 function showResult() {
     const hallticket = document.getElementById("hallticket").value;
-    const robotChecked = document.getElementById("robotCheck").checked;
+    const robotCheck = document.getElementById("robotCheck").checked;
+    const searchPage = document.getElementById("searchPage");
+    const photoPage = document.getElementById("photoPage");
 
-    // Validate 12-digit number
-    if (!/^\d{12}$/.test(hallticket)) {
-        alert("Please enter a valid 12-digit hall ticket number");
+    // Validation
+    if (hallticket.length !== 12 || isNaN(hallticket)) {
+        alert("Please enter a valid 12-digit Hall Ticket Number");
         return;
     }
 
-    // Check "I am not a robot"
-    if (!robotChecked) {
+    if (!robotCheck) {
         alert("Please confirm you are not a robot");
         return;
     }
 
-    // Hall ticket to image mapping
-    const students = {
-        "123456789012": "images/student1.jpg"
-        // Add more if needed
-    };
+    // Hide search section
+    searchPage.style.display = "none";
 
-    if (students[hallticket]) {
-        // Hide search interface
-        document.getElementById("searchPage").style.display = "none";
-        document.getElementById("photoPage").style.display = "block";
-
-        // Show full-screen photo
-        document.getElementById("photoPage").innerHTML = `
-            <img src="${students[hallticket]}" alt="Student Photo">
-        `;
-    } else {
-        alert("No result found");
-    }
+    // Show image (same image for any 12-digit number)
+    photoPage.innerHTML = `
+        <h2>Student Photo</h2>
+        <p><strong>Hall Ticket No:</strong> ${hallticket}</p>
+        <img src="student.jpg" alt="Student Photo" style="width:200px;border:2px solid #000;">
+        <br><br>
+        <button onclick="location.reload()">Search Again</button>
+    `;
 }
