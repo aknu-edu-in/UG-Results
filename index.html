@@ -2,64 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AKNU UG Results</title>
+    <title>Student Photo Viewer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Top Bar -->
-<div class="top-bar">
-    <p>Email : enquiry@aknu.edu.in</p>
-    <p>Office Timings : Mon-Sat : 10:00AM - 5:00PM</p>
-</div>
+<div id="searchPage" class="container">
+    <h2>Search Student Photo</h2>
 
-<!-- Menu -->
-<div class="menu">
-    <a href="#">HOME</a>
-    <span>Home &gt;&gt; Results</span>
-</div>
-
-<!-- Search Section -->
-<div id="searchPage">
-    <h2>UG Courses III Semester Results - Nov 2025</h2>
-
-    <label>Enter Hall Ticket Number:</label><br><br>
-    <input type="text" id="hallticket" placeholder="Enter 12 Digit Hall Ticket No" maxlength="12">
-    <br><br>
-
-    <label>
-        <input type="checkbox" id="robotCheck"> I am not a robot
-    </label>
-    <br><br>
+    <input type="text" id="hallticket" placeholder="Enter 12-digit Hall Ticket">
+    
+    <div class="checkbox">
+        <input type="checkbox" id="robotCheck">
+        <label for="robotCheck">I am not a robot</label>
+    </div>
 
     <button onclick="showResult()">Search</button>
 </div>
 
-<!-- Photo Display -->
-<div id="photoPage"></div>
-
-<!-- Footer -->
-<footer>
-    <div class="footer-section">
-        <h4>About Us</h4>
-        <p>University Profile | University Song | Logo | Contact Us</p>
-    </div>
-    <div class="footer-section">
-        <h4>Administration</h4>
-        <p>Vice-Chancellor | Registrar | Executive Council | Administrative Roles</p>
-    </div>
-    <div class="footer-section">
-        <h4>Academics</h4>
-        <p>Academic Programmes | Affiliated Colleges | Academic Calendar | General Info | RTI 4(1)B Data | AICTE-Mandatory Disclosure | University Hostels | Alumni | Blood Donor Hub</p>
-    </div>
-    <div class="footer-section">
-        <p>Contact Us : Adikavi Nannaya University, Raja Raja Narendra Nagar, Rajamahendravaram - 533296, Andhra Pradesh, INDIA.</p>
-        <p>Copyright © 2023 Adikavi Nannaya University. All rights reserved.</p>
-    </div>
-</footer>
+<div id="photoPage" class="container" style="display:none;"></div>
 
 <script src="script.js"></script>
 </body>
 </html>
-
-
